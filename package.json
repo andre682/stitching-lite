@@ -1,0 +1,35 @@
+{
+  "name": "stitching-lite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "André Torbitoni",
+  "license": "MIT",
+  "scripts": {
+    "build:watch": "babel ./src --out-dir ./build --source-maps --presets=es2015 --watch",
+    "build": "babel ./src --out-dir ./build --source-maps --presets=es2015",
+    "start:dev": "babel-node --presets=es2015 ./src/index.js",
+    "server": "yarn build && node ./build"
+  },
+  "dependencies": {
+    "apollo-link-http": "^1.5.14",
+    "apollo-server-express": "1.3.6",
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "graphql": "^14.1.1",
+    "graphql-resolvers": "^0.3.2",
+    "graphql-tools": "^4.0.4",
+    "hex-rgb": "^4.0.0",
+    "node-fetch": "^2.3.0",
+    "query-string": "^6.4.0",
+    "ramda": "^0.26.1",
+    "signale": "^1.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
